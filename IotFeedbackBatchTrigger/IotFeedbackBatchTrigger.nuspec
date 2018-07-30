@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://raw.githubusercontent.com/JulienCroain/IotFeedbackBatchTrigger/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/JulienCroain/IotFeedbackBatchTrigger</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/JulienCroain/IotFeedbackBatchTrigger/master/images/AzureIoTHub.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>AzureFunction IotHub IotFeedbackBatchTrigger</tags>
+  </metadata>
+</package>

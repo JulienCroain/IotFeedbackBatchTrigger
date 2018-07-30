@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Julien Croain</Authors>
+    <Company></Company>
+    <Copyright>MIT</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Description>Simplify creation of Azure Function to catch Complete &amp; Reject message from your Iot Hub client.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Devices" Version="1.16.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>

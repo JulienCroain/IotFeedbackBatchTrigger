@@ -14,5 +14,8 @@
     <releaseNotes>First release.</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>AzureFunction IotHub IotFeedbackBatchTrigger</tags>
+    <dependencies>
+      <dependency id="Microsoft.Azure.Devices" version="1.16.0" />
+    </dependencies>
   </metadata>
 </package>

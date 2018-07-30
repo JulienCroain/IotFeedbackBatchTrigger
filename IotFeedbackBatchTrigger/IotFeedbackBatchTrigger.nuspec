@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Julien Croain</authors>
+    <owners>Julien Croain</owners>
+    <licenseUrl>https://raw.githubusercontent.com/JulienCroain/IotFeedbackBatchTrigger/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/JulienCroain/IotFeedbackBatchTrigger</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/JulienCroain/IotFeedbackBatchTrigger/master/images/AzureIoTHub.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simplify creation of Azure Function to catch Complete &amp; Reject message from your Iot Hub client.</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>AzureFunction IotHub IotFeedbackBatchTrigger</tags>
+    <dependencies>
+      <dependency id="Microsoft.Azure.Devices" version="1.16.0" />
+    </dependencies>
+  </metadata>
+</package>

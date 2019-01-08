@@ -1,14 +1,14 @@
-﻿using Microsoft.Azure.WebJobs.Host.Protocols;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Microsoft.Azure.WebJobs.Host.Protocols;
 
-namespace IotFeedbackTrigger
+namespace IotFeedbackBatchTrigger
 {
     internal class IotFeedbackTriggerParameterDescriptor : TriggerParameterDescriptor
     {
         public override string GetTriggerReason(IDictionary<string, string> arguments)
         {
-            return string.Format("Iot Feedback trigger fired at {0}", DateTime.Now.ToString("o"));
+            return $"Iot Feedback trigger fired at {DateTime.Now:o}";
         }
     }
 }

@@ -1,20 +1,20 @@
-﻿using Microsoft.Azure.Devices;
+﻿using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Threading.Tasks;
+using Microsoft.Azure.Devices;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host.Bindings;
 using Microsoft.Azure.WebJobs.Host.Listeners;
 using Microsoft.Azure.WebJobs.Host.Protocols;
 using Microsoft.Azure.WebJobs.Host.Triggers;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Threading.Tasks;
 
-namespace IotFeedbackTrigger
+namespace IotFeedbackBatchTrigger
 {
     public class IotFeedbackTriggerBinding : ITriggerBinding
     {
-        private Dictionary<string, Type> _bindingContract;
-        private ParameterInfo _parameter;
+        private readonly Dictionary<string, Type> _bindingContract;
+        private readonly ParameterInfo _parameter;
 
         public IotFeedbackTriggerBinding(ParameterInfo parameter)
         {

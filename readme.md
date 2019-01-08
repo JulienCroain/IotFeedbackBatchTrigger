@@ -23,3 +23,10 @@ public static void Run([IotFeedbackTrigger] FeedbackBatch req, TraceWriter log)
 You can found documentation about the FeedbackBatch [here](<https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.devices.feedbackbatch?view=azure-dotnet>).
 
 The trigger will search after a setting named 'IotHubConnectionString' to connect to the Iot Hub ([see](/TestFunction/local.settings.json)).
+
+#Version 1.1.0 - [2018-01-08]
+## Added
+Add support on Azure Functions SDK V2. If you use Azure Functions SDK V1 please keep version 1.0.0
+
+#Version 1.0.0
+Initial version

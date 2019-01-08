@@ -1,27 +1,37 @@
 ﻿using System;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Azure.WebJobs.Extensions.Bindings;
+using Microsoft.Azure.WebJobs.Host.Bindings;
 
-namespace IotFeedbackTrigger
+namespace IotFeedbackBatchTrigger
 {
-    internal class FeedbackBatchValueBinder : ValueBinder
+    internal class FeedbackBatchValueBinder : IValueBinder
     {
-        private readonly object _value;
+        private object _value;
 
-        public FeedbackBatchValueBinder(ParameterInfo parameter, object argument) : base(parameter.ParameterType)
+        public FeedbackBatchValueBinder(ParameterInfo parameter, object argument)
         {
             _value = argument;
+            Type = parameter.ParameterType;
         }
 
-        public override Task<object> GetValueAsync()
+        public Task<object> GetValueAsync()
         {
             return Task.FromResult(_value);
         }
 
-        public override string ToInvokeString()
+        public string ToInvokeString()
         {
             return $"{_value}";
+        }
+
+        public Type Type { get; }
+
+        public Task SetValueAsync(object value, CancellationToken cancellationToken)
+        {
+            _value = value;
+            return Task.CompletedTask;
         }
     }
 }

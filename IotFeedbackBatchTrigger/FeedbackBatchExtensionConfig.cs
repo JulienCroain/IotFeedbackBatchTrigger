@@ -1,8 +1,8 @@
-﻿using Microsoft.Azure.WebJobs;
+﻿using System;
+using Microsoft.Azure.Devices;
 using Microsoft.Azure.WebJobs.Host.Config;
-using System;
 
-namespace IotFeedbackTrigger
+namespace IotFeedbackBatchTrigger
 {
     public class FeedbackBatchExtensionConfig : IExtensionConfigProvider
     {
@@ -17,7 +17,8 @@ namespace IotFeedbackTrigger
             if (context == null)
                 throw new ArgumentNullException(nameof(context));
 
-            context.Config.RegisterBindingExtensions(new FeedbackBatchTriggerAttributeBindingProvider(this));
+            context.AddBindingRule<IotFeedbackTriggerAttribute>()
+                .BindToTrigger<FeedbackBatch>(new FeedbackBatchTriggerAttributeBindingProvider(this));
         }
     }
 }

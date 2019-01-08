@@ -1,4 +1,4 @@
-using IotFeedbackTrigger;
+using IotFeedbackBatchTrigger;
 using Microsoft.Azure.Devices;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;

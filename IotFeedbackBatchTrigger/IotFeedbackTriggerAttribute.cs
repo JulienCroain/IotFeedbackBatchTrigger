@@ -1,7 +1,7 @@
-﻿using Microsoft.Azure.WebJobs.Description;
-using System;
+﻿using System;
+using Microsoft.Azure.WebJobs.Description;
 
-namespace IotFeedbackTrigger
+namespace IotFeedbackBatchTrigger
 {
     [AttributeUsage(AttributeTargets.Parameter)]
     [Binding]

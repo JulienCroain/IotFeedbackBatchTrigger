@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Devices;
 using Microsoft.Azure.WebJobs.Host.Triggers;
 
-namespace IotFeedbackTrigger
+namespace IotFeedbackBatchTrigger
 {
     public class FeedbackBatchTriggerAttributeBindingProvider : ITriggerBindingProvider
     {

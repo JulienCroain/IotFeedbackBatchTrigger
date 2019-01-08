@@ -1,16 +1,16 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Azure.Devices;
-using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Azure.WebJobs.Host.Executors;
 using Microsoft.Azure.WebJobs.Host.Listeners;
 
-namespace IotFeedbackTrigger
+namespace IotFeedbackBatchTrigger
 {
     internal class IotFeedbackListener : IListener
     {
-        private ITriggeredFunctionExecutor _executor;
-        private IotFeedbackTriggerAttribute _attribute;
+        private readonly ITriggeredFunctionExecutor _executor;
+        private readonly IotFeedbackTriggerAttribute _attribute;
         private bool _listening = false;
 
         public IotFeedbackListener(ITriggeredFunctionExecutor executor, IotFeedbackTriggerAttribute attribute)
@@ -31,7 +31,7 @@ namespace IotFeedbackTrigger
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            var connectionString = AmbientConnectionStringProvider.Instance.GetConnectionString(_attribute.IotHubConnectionString);
+            var connectionString = Environment.GetEnvironmentVariable(_attribute.IotHubConnectionString);
 
             var serviceClient = ServiceClient.CreateFromConnectionString(connectionString);
 

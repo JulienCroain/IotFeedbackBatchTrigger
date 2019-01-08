@@ -16,6 +16,7 @@
     <tags>AzureFunction IotHub IotFeedbackBatchTrigger</tags>
     <dependencies>
       <dependency id="Microsoft.Azure.Devices" version="1.16.0" />
+      <dependency id="Microsoft.Azure.WebJobs.Extensions" version="3.0.1" />
     </dependencies>
   </metadata>
 </package>
